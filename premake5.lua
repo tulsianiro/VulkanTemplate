@@ -1,8 +1,8 @@
 VULKAN_SDK = os.getenv("VULKAN_SDK")
 
 IncludeDir = {}
-IncludeDir["GLFW"] = "%{wks.location}/external/GLFW/include"
-IncludeDir["glm"] = "%{wks.location}/external/glm"
+IncludeDir["GLFW"] = "%{wks.location}/Vendor/GLFW/include"
+IncludeDir["glm"] = "%{wks.location}/Vendor/glm"
 IncludeDir["VulkanSDK"] = "%{VULKAN_SDK}/Include"
 
 LibraryDir = {}
@@ -20,7 +20,7 @@ workspace "VulkanTemplate"
 	}
 
 	group("Dependencies")
-		include "external/glfw"
+		include "Vendor/glfw"
 	group ""
 
 project "VulkanTemplate"
